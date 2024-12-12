@@ -1,0 +1,64 @@
+.App-header {
+    position: fixed; /* ยึด header ให้อยู่ด้านบน */
+    top: 0; /* ติดขอบด้านบน */
+    left: 0; /* ติดขอบด้านซ้าย */
+    width: 100%; /* ความกว้างเต็มหน้าจอ */
+    height: 20vh; /* ความสูง 20% ของ viewport */
+    background-color: #282c34; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    display: flex; /* ใช้ flexbox จัดวางเนื้อหา */
+    flex-direction: column; /* จัดเรียงแนวตั้ง */
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    padding: 10px 20px; /* ระยะ padding */
+    box-sizing: border-box; /* รวม padding ในขนาดกล่อง */
+    z-index: 1000; /* ทำให้แสดงอยู่ด้านบนสุด */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.header-title {
+    margin: 0;
+    font-size: 36px; /* ขนาดฟอนต์ของหัวเรื่อง */
+    font-weight: bold; /* ทำให้ข้อความตัวหนา */
+    text-transform: uppercase; /* เปลี่ยนข้อความเป็นตัวพิมพ์ใหญ่ */
+    color: white; /* สีข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.header-caption {
+    margin: 5px 0 0 0; /* ระยะห่างจากหัวข้อด้านบน */
+    font-size: 16px; /* ขนาดฟอนต์ของแคปชั่น */
+    color: #61dafb; /* สีฟ้าสำหรับแคปชั่น */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+h1 {
+    padding: 10px;
+    font-size: 60px; /* ลดขนาดฟอนต์ */
+    color: white;
+    background-size: cover;
+    background-image: url("./BG.png"); /* ใส่รูปพื้นหลังถ้ามี */
+    -webkit-text-fill-color: transparent; /* ทำให้ข้อความโปร่งใส */
+    -webkit-background-clip: text; /* ตัดข้อความตามพื้นหลัง */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* Media Queries สำหรับหน้าจอเล็ก (มือถือ) */
+@media (max-width: 768px) {
+    .App-header {
+        height: auto; /* ปรับให้ความสูงเปลี่ยนตามเนื้อหา */
+        padding: 15px; /* เพิ่ม padding */
+    }
+
+    .header-title {
+        font-size: 24px; /* ลดขนาดฟอนต์ของหัวเรื่อง */
+    }
+
+    .header-caption {
+        font-size: 14px; /* ลดขนาดฟอนต์ของแคปชั่น */
+    }
+
+    h1 {
+        font-size: 40px; /* ลดขนาดฟอนต์สำหรับหัวข้อใหญ่ */
+    }
+}
