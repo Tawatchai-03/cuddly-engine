@@ -27,7 +27,7 @@ function FirstPage() {
           style={{
             '--clr': '#FF44CC',
           }}
-          onClick={() => alert('Upload-Signature clicked!')} // ตัวอย่างฟังก์ชัน
+          onClick={() => navigate('/upload-signature')} // เปลี่ยนไปหน้า /upload-signature
         >
           <span>Upload-Signature</span>
           <i></i>

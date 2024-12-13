@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../App.css'; // ใช้ Path ที่ถูกต้องสำหรับ App.css
-import Header from './Header'; // Header ต้องใช้ Path ที่ถูกต้อง
 import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist/legacy/build/pdf';
 
 // ใช้ worker ที่มาพร้อมกับแพ็กเกจ pdfjs-dist
@@ -42,7 +41,6 @@ function Upload() {
 
   return (
     <div className="upload-page">
-      <Header />
       <div className="advertisement-left">พื้นที่สำหรับโฆษณา</div>
       <main>
         <div className="file-container">

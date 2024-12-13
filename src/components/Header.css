@@ -1,3 +1,17 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  margin-top: 170px; /* ความสูงของ Header */
+}
+
+
+
+
 .App-header {
     position: fixed; /* ยึด header ให้อยู่ด้านบน */
     top: 0; /* ติดขอบด้านบน */
