@@ -1,23 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header'; // Header ใช้ในทุกหน้า
-import FirstPage from './components/FirstPage'; // นำเข้า FirstPage
-import Upload from './components/Upload'; // นำเข้าหน้า Upload
+import FirstPage from './components/FirstPage';
+import Upload from './components/Upload';
+import UploadSignature from './components/UploadSignature'; // เพิ่มการนำเข้า
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header /> {/* Header ที่จะแสดงทุกหน้า */}
-        <Routes>
-          {/* หน้าแรก */}
-          <Route path="/" element={<FirstPage />} />
-          
-          {/* หน้า Upload */}
-          <Route path="/upload" element={<Upload />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/upload-signature" element={<UploadSignature />} /> {/* เพิ่มเส้นทาง */}
+      </Routes>
     </Router>
   );
 }
